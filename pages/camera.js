@@ -23,21 +23,21 @@ function createExample(page) {
     }).on("cameramove", function() {
       updateCameraTextView("Camera changed by user");
     });
-    this.set("camera", {position: [48.8644458, 2.3589976]});
+    this.set("camera", {position: [33.5236235,-7.8313316]});
   }).appendTo(page);
 
   var paris = new tabris.Button({
     left: MARGIN, right: ["50%", 8], top: MARGIN,
-    text: "Show Paris"
+    text: "دار بوعزة، الدار البيضاء "
   }).on("select", function() {
-    map.set("camera", {position: [48.8644458, 2.3589976]});
+    map.set("camera", {position: [33.5236235,-7.8313316]});
   }).appendTo(controls);
 
   new tabris.Button({
     left: ["50%", 8], right: MARGIN, top: MARGIN,
-    text: "Show Sydney"
+    text: "الرياض المملكة السعودية"
   }).on("select", function() {
-    map.set("camera", {position: [-33.867, 151.206]});
+    map.set("camera", {position: [24.725398,46.2620111]});
   }).appendTo(controls);
 
   var cameraTextView = new tabris.TextView({

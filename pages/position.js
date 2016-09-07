@@ -18,22 +18,22 @@ function createExample(page) {
   var map = new esmaps.Map({
     left: 0, right: 0, top: 0, bottom: controls
   }).on("ready", function() {
-    this.set("position", [48.8644458, 2.3589976]);
+    this.set("position", [24.725398,46.2620111]);
     updatePositionTextView();
   }).appendTo(page);
 
   var paris = new tabris.Button({
     left: MARGIN, right: ["50%", 8], top: MARGIN,
-    text: "Show Paris"
+    text: "الرياض"
   }).on("select", function() {
-    map.set("position", [48.8644458, 2.3589976]);
+    map.set("position", [24.725398,46.2620111]);
   }).appendTo(controls);
 
   new tabris.Button({
     left: ["50%", 8], right: MARGIN, top: MARGIN,
-    text: "Show Sydney"
+    text: "داربوعزة"
   }).on("select", function() {
-    map.set("position", [-33.867, 151.206]);
+    map.set("position", [33.5236235,-7.8313316]);
   }).appendTo(controls);
 
   var updatePositionButton = new tabris.Button({

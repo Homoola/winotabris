@@ -20,19 +20,19 @@ function createExample(page) {
   }).on("ready", function() {
     this.on("change:camera", updateRegionTextView)
       .on("cameramove", updateRegionTextView)
-      .set("region", {southWest: [48.812059, 2.2495793], northEast: [48.910537, 2.4205543]});
+      .set("region", {southWest: [24.725398,46.2620111], northEast: [24.825398,46.3620111]});
   }).appendTo(page);
 
   var paris = new tabris.Button({
     left: MARGIN, right: ["50%", 8], top: MARGIN,
-    text: "Show Paris"
+    text: "الرياض"
   }).on("select", function() {
-    map.set("region", {southWest: [48.812059, 2.2495793], northEast: [48.910537, 2.4205543]});
+    map.set("region", {southWest: [24.725398,46.2620111], northEast: [24.825398,46.3620111]});
   }).appendTo(controls);
 
   new tabris.Button({
     left: ["50%", 8], right: MARGIN, top: MARGIN,
-    text: "Show Sydney"
+    text: "سيدني"
   }).on("select", function() {
     map.set("region", {southWest: [-33.912452, 151.1260233], northEast: [-33.785166, 151.2875383]});
   }).appendTo(controls);

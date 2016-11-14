@@ -28,9 +28,11 @@ function createExample(page) {
     markupEnabled: true,
     text: "Tap on marker..."
   }).appendTo(controls);
-
+var image = {
+    url: "https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/128/Map-Marker-Marker-Outside-Azure.png"
+	}
   function createMarker(map, position, title) {
-    var marker = new esmaps.Marker({position: position});
+    var marker = new esmaps.Marker({position: position,icon:image});
     marker.on("tap", function() {
       markerTextView.set("text", "Tapped on <b>" + title + "</b>");
     });
